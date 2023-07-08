@@ -1,0 +1,27 @@
+@import './variables';
+
+.main-container {
+  display: grid;
+  place-items: center;
+  background: $col__pre-bg;
+  padding: 20px;
+  height: 350px;
+
+  &__heading {
+    color: $col-link__col;
+    font-size: 30px;
+    animation: tilt-n-move-shaking infinite 0.5s;
+    @media screen and (min-width: 768px) {
+      font-size: 48px;
+    }
+  }
+}
+
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+  
